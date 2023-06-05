@@ -1,0 +1,6 @@
+EXTRA_CFLAGS += -Wall -g -D$(SOC)
+
+ccflags-y += -I$(PWD)/../include/platform
+obj-m := softlock.o
+
+# imx_MU_msg-objs := MU_msg.o
