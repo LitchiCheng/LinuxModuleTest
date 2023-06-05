@@ -11,7 +11,7 @@ static int hog_thread(void *data)
     unsigned long flags;
     printk(KERN_INFO "Hogging a CPU now\n");
     spin_lock_irqsave(&lock, flags);
-    while (1);/* unreached */
+    while (1){};/* unreached */
     return 0;
 }
 
@@ -22,3 +22,4 @@ static int __init hog_init(void)
 }
 
 module_init(hog_init);
+MODULE_LICENSE("GPL v2");

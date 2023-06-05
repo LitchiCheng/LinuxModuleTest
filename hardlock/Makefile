@@ -1,4 +1,6 @@
 KDIR ?= /home/dar/imx8/seer-imx-linux-kernel
+# KDIR ?= /home/dar/imx8/linux-toradex
+
 ARCH ?= arm64
 CROSS_COMPILE ?= aarch64-linux-gnu-
 SOC ?= IMX8QM
@@ -13,7 +15,7 @@ clean:
 
 module_install:
 	date
-	scp imx-rpmsg-com.ko root@192.168.15.227:/home/root/safe-module/
+	scp hardlock.ko sr@192.168.31.77:/home/sr
 
 app:
 	make -C app-demo
